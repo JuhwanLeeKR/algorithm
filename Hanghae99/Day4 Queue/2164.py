@@ -37,7 +37,7 @@ for i in range(1, N+1):
 
 deque = deque(queue)
 
-while len(queue):
+while len(deque):
     deque.popleft()
     move = deque.popleft()
     deque.append(move)
