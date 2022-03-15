@@ -10,6 +10,7 @@ for _ in range(C):
         else:
             return
 
-    result = list(filter(upAverage, scoreList))  # 평균이상 학생 점수 리스트
+    result = list(filter(upAverage, scoreList[1:]))  # 평균이상 학생 점수 리스트
+
     percent = '%.3f' % (len(result) / len(scoreList[1:]) * 100)
     print(f'{percent}%')
