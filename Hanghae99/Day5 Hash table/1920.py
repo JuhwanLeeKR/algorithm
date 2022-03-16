@@ -27,8 +27,10 @@ for i in range(len(bList)):
         print(0)'''
 
 # 시간초과
-# https://velog.io/@ledcost/%EB%B0%B1%EC%A4%80-10816-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%88%AB%EC%9E%90-%EC%B9%B4%EB%93%9C-2-%EC%8B%A4%EB%B2%844-%EC%9D%B4%EB%B6%84-%ED%83%90%EC%83%89
-####
+'''
+1920문제가 아닌 10816 풀이 입니다.
+https://velog.io/@ledcost/%EB%B0%B1%EC%A4%80-10816-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%88%AB%EC%9E%90-%EC%B9%B4%EB%93%9C-2-%EC%8B%A4%EB%B2%844-%EC%9D%B4%EB%B6%84-%ED%83%90%EC%83%89
+
 
 
 import sys
@@ -53,4 +55,4 @@ for target in bList:
     if result == None:
         print(0, end=" ")
     else:
-        print(result, end=" ")
+        print(result, end=" ")'''
