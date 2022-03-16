@@ -54,12 +54,11 @@ class Solution:
 
         # jewelList의 길이 만큼 반복을 해줍니다.
         for i in range(len(jewelList)):
-            # jewel이란 변수에 보석 명을 저장해줍니다.
-            # 변수로 따로 저장해주지 않으면 error가 뜨게됩니다.
-            jewel = jewelList[i]  # 1: z, 2: a, 3: E, 4:e, 5:Z
+            # jewel = jewelList[i]  # 1: z, 2: a, 3: E, 4:e, 5:Z
             # try except를 사용하여 keyerror를 방지해줍니다.
             try:
-                jewelCount += stoneCount[jewel]  # ex) stoneCount['z'] = 1
+                jewelCount += stoneCount[jewelList[i]]
+                # ex) stoneCount['z'] = 1
             # 보석이 없는 경우를 고려해줍니다.
             except:
                 # pass는 에러가 발생해도 무시하고 넘어가 줍니다.
