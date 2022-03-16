@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/jewels-and-stones/
+# https://bskyvision.com/1059 dictionary의 get() 사용법
 '''
 You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
 
@@ -54,12 +55,12 @@ class Solution:
 
         # jewelList의 길이 만큼 반복을 해줍니다.
         for i in range(len(jewelList)):
-            # jewel = jewelList[i]  # 1: z, 2: a, 3: E, 4:e, 5:Z
+            # jewelList[i]  # 1: z, 2: a, 3: E, 4:e, 5:Z
             # try except를 사용하여 keyerror를 방지해줍니다.
             try:
                 jewelCount += stoneCount[jewelList[i]]
                 # ex) stoneCount['z'] = 1
-            # 보석이 없는 경우를 고려해줍니다.
+            # stoneCount에 보석이 없는 경우를 고려해줍니다.
             except:
                 # pass는 에러가 발생해도 무시하고 넘어가 줍니다.
                 pass
