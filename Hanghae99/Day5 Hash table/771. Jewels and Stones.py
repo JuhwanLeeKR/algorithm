@@ -17,11 +17,12 @@ Input: jewels = "z", stones = "ZZ" Output: 0
 4. 'a'와 'A'는 서로 다른 종류의 돌로 간주합니다.
 - jewels 및 stones의 길이는 50이하 정수입니다.
 - 영문만 고려하면 됩니다.
+- jewels는 문자열 중복이 없기에 set을 사용하지 않아도 됩니다.
 '''
 
 # jewels = "aA"
 # stones = "aAAbbbb"
-jewels = "zaaeZ"
+jewels = "zaEeZ"
 stones = "ZZzk"
 
 
@@ -30,31 +31,39 @@ class Solution:
         # jewels과 stones가 string 형식으로 들어오게 됩니다.
         # 1. jewels 의 값을 뽑아내자
         # 2. stones를 key-value(dictioinary)로 변환 시키자.
+        #    -> {알파벳: 수, 알파벳: 수, ...}
+        # 3. stones에 있는 jewel의 개수를 파악하자.
         jewelList = list(jewels)
         stoneList = list(stones)
-        # alphabet을 key로 받고 갯수를 value로 받자.
-        # 개수를 담아줄 변수를 선언합니다.
+
+        # 해시 테이블을 선언해 줍니다.
         stoneCount = {}
-        # try, except로 갯수를 찾습니다.
-        # 웹개발 종합반 python 서버 작업
+        # 웹개발 종합반 python 서버 작업 활용
+        # try, except로 개수를 찾습니다.
         for i in stoneList:
             try:
                 stoneCount[i] += 1
             except:
                 stoneCount[i] = 1
 
+        # 보석 개수를 저장하기 위한 변수를 선언해줍니다.
         jewelCount = 0
+
+        # jewelList의 길이 만큼 반복을 해줍니다.
         for i in range(len(jewelList)):
-            # 보석명을 확인해줍니다.
+            # jewel이란 변수에 보석 명을 저장해줍니다.
+            # 변수로 따로 저장해주지 않으면 error가 뜨게됩니다.
             jewel = jewelList[i]  # 1: a, 2: b
-            # 보석이 없는 경우를 고려해줍니다.
+            # try except를 사용하여 keyerror를 방지해줍니다.
             try:
                 jewelCount += stoneCount[jewel]
+            # 보석이 없는 경우를 고려해줍니다.
             except:
+                # pass는 에러가 발생해도 무시하고 넘어가 줍니다.
                 pass
 
         return jewelCount
 
 
-sol = Solution()
-print(sol.numJewelsInStones(jewels, stones))
+# sol = Solution()
+# print(sol.numJewelsInStones(jewels, stones))
