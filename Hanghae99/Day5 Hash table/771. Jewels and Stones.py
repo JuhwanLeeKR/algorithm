@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/jewels-and-stones/
 # https://bskyvision.com/1059 dictionary의 get() 사용법
-'''
+"""
 You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
 
 Letters are case sensitive, so "a" is considered a different type of stone from "A".
@@ -19,7 +19,7 @@ Input: jewels = "z", stones = "ZZ" Output: 0
 - jewels 및 stones의 길이는 50이하 정수입니다.
 - 영문만 고려하면 됩니다.
 - jewels는 문자열 중복이 없기에 set을 사용하지 않아도 됩니다.
-'''
+"""
 
 # jewels = "aA"
 # stones = "aAAbbbb"
@@ -68,10 +68,10 @@ class Solution:
         return jewelCount
 
 
-'''
+"""
 jewels = "zaEeZ"
 stones = "ZZzk" => 3이 print 될 것입니다.(z: 1개 ,Z: 2개)
-'''
+"""
 
 sol = Solution()
 print(sol.numJewelsInStones(jewels, stones))
