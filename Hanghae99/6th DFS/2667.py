@@ -1,4 +1,4 @@
-"""n = int(input())
+n = int(input())
 li = []
 
 
@@ -17,10 +17,6 @@ stack = []
 
 for row in range(rows):
     for col in range(cols):
-        # if li[row][col] == 1:
-        #     count += 1
-        #     numList.append(count)
-        #     count = 0
         if li[row][col] != 1:
             continue
 
@@ -28,8 +24,6 @@ for row in range(rows):
         stack.append((row, col))
 
         while stack:
-            if nx < 0 or ny < 0 or nx >= n or ny >= n or apt[nx][ny] == 0:
-                        continue
             tmp = stack.pop()
             y, x = tmp
 
@@ -55,11 +49,11 @@ for row in range(rows):
                     stack.append((y, x + 1))
 
 
-print(numList)
+print(count)
 
 # 상하좌우 검사
 # 숫자를 더해줘야함.
-# 단지수를 출력하고 집의 수를 오름 차순으로 나타내준다."""
+# 단지수를 출력하고 집의 수를 오름 차순으로 나타내준다.
 
 
 """n = int(input())  # 지도의 크기 받음
