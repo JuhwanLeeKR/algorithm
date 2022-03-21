@@ -52,6 +52,21 @@ class Solution:
         return self.max_length
 
 
+root = [3, 5, 3, 5, 5, 3, None, 5, 1, 5, 2, 3]
+
+node11 = TreeNode(root[11], None, None)
+node10 = TreeNode(root[10], None, None)
+node9 = TreeNode(root[9], None, None)
+node8 = TreeNode(root[8], None, None)
+node7 = TreeNode(root[7], None, None)
+node5 = TreeNode(root[5], node11, None)
+node4 = TreeNode(root[4], node9, node10)
+node3 = TreeNode(root[3], node7, node8)
+node2 = TreeNode(root[2], node5, None)
+node1 = TreeNode(root[1], node3, node4)
+node0 = TreeNode(root[0], node1, node2)
+
+
 sol = Solution()
-root = [5, 4, 5, 1, 1, 5]
-print(sol.longestUnivaluePath(root))
+
+print("가장 긴 동일 값의 경로는", sol.longestUnivaluePath(node0), "입니다.")
