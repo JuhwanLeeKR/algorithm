@@ -9,7 +9,7 @@ class TreeNode:
 from typing import Optional
 
 """
-1. 재귀 함수 사용
+1. 트리구조이고 그래프이니깐 dfs를 사용하자
 2. left가 없을때까지 내려간다 (밑바닥 찍기)
 3. 최대 길이 전역 변수 사용
 4. value 값을 비교하여 left.val과 현재 val이 같으면 +1
@@ -18,7 +18,7 @@ from typing import Optional
 
 
 class Solution:
-    # 전역 변수 선언
+    # 클래스 변수 선언
     max_length = 0
 
     def longestUnivaluePath(self, root: Optional[TreeNode]):  # -> int:
