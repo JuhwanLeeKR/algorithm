@@ -56,3 +56,17 @@ for (let i=0; i<keys.length; i++) {
 
 console.log(obj);
 */
+
+/*
+// 동현님 풀이
+function grade(nameStr, scoreStr) {
+  const names = nameStr.split(” “);
+  const scores = scoreStr.split(” “).map((num) => Number(num));
+  // method 1
+  return names.reduce((result, name, index) => {
+    result[name] = scores[index];
+    return result;
+  }, {});
+  // method 2
+  // return Object.fromEntries(names.map((name, index) => [name, scores[index]]));
+} */
