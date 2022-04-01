@@ -93,6 +93,7 @@ querty
 // 정답은 solution()을 사용한다.
 {
   const solution = (input) => {
-    return;
+    let result;
+    return console.log(input, result);
   };
 }
